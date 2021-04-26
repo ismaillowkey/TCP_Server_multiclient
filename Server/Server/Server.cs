@@ -97,7 +97,7 @@ namespace Server
                 e.SuppressKeyPress = true;
                 if (sendTextBox.Text.Length > 0)
                 {
-                    string msg = sendTextBox.Text;
+                    string msg = sendTextBox.Text + Environment.NewLine;
                     sendTextBox.Clear();
                     //telnet.LogWrite("<- Server (You) -> " + msg);
                     telnet.SendBackMessage(msg);
